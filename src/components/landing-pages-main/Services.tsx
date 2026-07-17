@@ -1,0 +1,279 @@
+'use client';
+
+import dynamic from 'next/dynamic';
+import React, { useState, useEffect } from 'react';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+
+const TickerTape = dynamic(() => import('react-ts-tradingview-widgets').then((w) => w.TickerTape), {
+  ssr: false,
+});
+
+const LocationMap = dynamic(() => import('./LocationMap'), { ssr: false });
+
+interface Tab {
+  name: string;
+  hash: string;
+}
+
+const tabs: Tab[] = [
+  { name: 'My Story and Services', hash: 'my-story' },
+  { name: 'Client Service Team', hash: 'client-service-team' },
+  { name: 'Location', hash: 'location' },
+];
+
+const services: string[] = [
+  'Wealth Management',
+  'Retirement Planning',
+  'Business Planning',
+  '401(k) Rollovers',
+  'Trust Services',
+  'Sustainable Investing',
+  '529 Plans',
+  'Corporate Retirement Plans',
+];
+
+const MyStory: React.FC = () => {
+  const [more, setMore] = useState(false);
+
+  return (
+    <div className="w-full">
+      <div className="md:flex mt-8">
+        <div className="md:w-3/5 pl-3 pr-4">
+          <h4 className="text-2xl font-bold mb-[14px] mt-5">My Story and Services</h4>
+          <div className="relative pt-[56.25%]">
+            <iframe
+              allowFullScreen
+              className="absolute top-0 left-0 h-full border-none w-full"
+              allow="encrypted-media"
+              src="https://players.brightcove.net/644391012001/OsECwOFeq_default/index.html?videoId=6040280424001"
+              title="Video player"
+            />
+          </div>
+
+          <p className="text-base mt-[14px]">
+            My goal is to thoroughly understand your financial needs and align the right resources to
+            help you meet — and exceed — them. Whether you are planning for retirement, growing a
+            business, or building generational wealth, I am here to help you evaluate near-term
+            priorities and design a long-term strategy that is uniquely yours.
+            <br />
+            {more && <br />}
+            {more && (
+              <span>
+                <span className="font-semibold">Alishia Marie Allred: </span>
+                &quot;I am Alishia Marie Allred (CRD#&nbsp;8046354), an Investment Adviser and
+                Broker regulated by FINRA. I am currently registered with EDWARD JONES
+                (CRD#&nbsp;250), located at 12555 Manchester Road, St. Louis, MO 63131. I have
+                been registered with the firm as a Broker since June&nbsp;15,&nbsp;2026 and as an
+                Investment Adviser Representative since July&nbsp;7,&nbsp;2026, operating from
+                Moab, UT. My practice is built on the belief that every client deserves a clear,
+                personalized financial plan — not a one-size-fits-all approach. I work closely
+                with individuals, families, and business owners to develop strategies across
+                wealth management, retirement planning, portfolio construction, and estate
+                planning. EDWARD JONES is a registered broker-dealer, and through this platform I
+                am able to provide access to a full spectrum of investment products and advisory
+                solutions.&quot;
+              </span>
+            )}
+            <br />
+            <span
+              className="text-[#0F8EC7] hover:underline transition-all duration-500 flex gap-3 cursor-pointer"
+              onClick={() => setMore((x) => !x)}
+            >
+              {!more ? 'About me — read more' : 'Show less'}
+              {!more ? <ChevronDownIcon className="w-4" /> : <ChevronUpIcon className="w-4" />}
+            </span>
+          </p>
+        </div>
+        <div className="md:w-2/5 pl-4 pr-3">
+          <h4 className="text-2xl font-bold mb-[14px]">Services Include</h4>
+          <ul className="list-disc mt-4 pl-8">
+            {services.map((service) => (
+              <li key={service} className="text-base mb-[6px]">
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* <div className="px-3">
+        <p className="text-[#757575] my-[62px]">
+          Registered with National Financial Services LLC (CRD#: 13041) since 12/11/2023.
+          Securities Agent: DC, WI, WA, VT, VA, UT, TX, TN, SC, RI, OH, NY, NJ, NC, MI, MD, MA,
+          LA, KY, KS, GA, FL, CO, CA, AZ, OR; General Securities Representative; Investment Advisor
+          Representative.
+        </p>
+        <div className="border-t border-t-[#CCCCCC]">
+          <p className="text-sm my-[32px]">
+            Check the background of our firm and investment professionals on{' '}
+            <a
+              href="https://brokercheck.finra.org/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#0F8EC7] cursor-pointer text-base font-bold underline"
+            >
+              FINRA&apos;s BrokerCheck
+            </a>
+            . National Financial Services LLC is a member of FINRA/SIPC.
+          </p>
+        </div>
+      </div> */}
+    </div>
+  );
+};
+
+const ServiceTeam: React.FC = () => {
+  return (
+    <div className="p-7.5">
+      <h4 className="text-2xl font-bold my-4 mt-3">The Service Team</h4>
+      <h6 className="font-bold text-lg my-2">
+        Alishia Marie Allred — Investment Adviser / Broker
+      </h6>
+      <p className="mb-4">
+        Alishia Marie Allred (CRD#: 8046354) is an Investment Adviser and Broker regulated by
+        FINRA. She is currently registered with EDWARD JONES (CRD#: 250), a registered
+        broker-dealer headquartered at 12555 Manchester Road, St. Louis, MO 63131. Her practice
+        is centred on delivering thoughtful, personalised financial guidance to individuals,
+        families, and business owners at every stage of their financial journey.
+      </p>
+      <p className="mb-6">
+        With her office located in Moab, UT, Alishia and her team bring together deep market
+        knowledge and a client-first philosophy to help you build, protect, and transfer wealth
+        with confidence. Every engagement begins with listening — because the right strategy
+        starts with truly understanding your goals, values, and timeline.
+      </p>
+      <div className="space-y-1">
+        <p className="text-base">
+          <span className="font-semibold">Firm:</span> EDWARD JONES (CRD#: 250)
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">Registered Since:</span> June 15, 2026 (Broker) / July 7, 2026 (Investment Adviser)
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">State Licenses:</span> Utah (Broker and Investment Adviser)
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">SRO Registrations:</span> FINRA, NYSE American LLC, Nasdaq Stock Market, New York Stock Exchange
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">Phone:</span> +1(424)279-3916
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">Email:</span> alishiamarieallred@gmail.com
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const MyLocation: React.FC = () => {
+  return (
+    <div className="p-7.5">
+      <div className="mt-10 md:flex md:pr-10">
+        <div className="md:flex-1">
+          <h4 className="text-2xl font-bold mb-[14px] mt-5">LOCATIONS</h4>
+          <p className="text-base font-semibold mb-1">Main Office</p>
+          <p className="text-base mb-4">
+            12555 Manchester Road
+            <br />
+            St. Louis, MO 63131, USA
+            <br />
+            Direct: +1(424)279-3916
+          </p>
+          <p className="text-base font-semibold mb-1">Moab Office</p>
+          <p className="text-base">
+            Moab, UT, USA
+          </p>
+        </div>
+        <div className="md:flex-1 overflow-hidden">
+          <LocationMap />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Services: React.FC = () => {
+  const [selected, setSelected] = useState(tabs[0].name);
+
+  // Handle hash-based tab selection
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      const matchingTab = tabs.find((tab) => tab.hash === hash);
+      if (matchingTab) {
+        setSelected(matchingTab.name);
+        // Scroll to the portfolio-details section
+        const element = document.getElementById('portfolio-details');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Check hash on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleTabClick = (tab: Tab) => {
+    setSelected(tab.name);
+    // Update URL hash without triggering scroll
+    window.history.replaceState(null, '', `#${tab.hash}`);
+  };
+
+  return (
+    <div className="container translate-y-[-100px] flex py-6 gap-7 h-fit">
+      <div id="portfolio-details" className="bg-white w-full p-4">
+        <div className="border-b border-gray-200 max-w-fit">
+          <div className="-mb-px flex overflow-x-auto" aria-label="Tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab.name}
+                onClick={() => handleTabClick(tab)}
+                className={
+                  (selected === tab.name
+                    ? 'border-[#0F8EC7] '
+                    : 'border-transparent hover:border-[#0F8EC7]') +
+                  ' whitespace-nowrap text-[#002B51] py-3 px-[15px] border-b-4 text-base'
+                }
+                aria-current={selected === tab.name ? 'page' : undefined}
+                type="button"
+              >
+                {tab.name}
+              </button>
+            ))}
+          </div>
+        </div>
+        {selected === tabs[0].name && <MyStory />}
+        {selected === tabs[1].name && <ServiceTeam />}
+        {selected === tabs[2].name && <MyLocation />}
+      </div>
+    </div>
+  );
+};
+
+export default Services;
+
+export const PortfolioCTA: React.FC = () => {
+  return (
+    <div className="mt-10 w-full">
+      <TickerTape />
+      <div className="bg-[#0F8EC7] py-[75px]">
+        <div className="max-w-768 text-center text-white mx-auto">
+          <h5 className="text-2xl mt-3">Wealth Management</h5>
+          <h5 className="text-2xl mt-3">Global Investment Office</h5>
+          <h6 className="my-[90px] font-inter text-[30px]">Portfolio Insights</h6>
+          <a
+            href="#faqs"
+            className="py-[16px] px-[52px] rounded-full text-[19px] border-2 border-[rgba(255,255,255,0.5)] font-bold hover:bg-white hover:text-[#0F8EC7]"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,103 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Never let two deploys race the same bucket. Queue rather than cancel, so an
+# in-flight S3 sync is not killed halfway.
+concurrency:
+  group: prod-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.PROD_DISTRIBUTION }}
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Speeds up rebuilds. Safe to miss — the build just runs cold.
+      - name: Restore Next.js build cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      # NEXT_PUBLIC_* values are inlined into the bundle at build time, so they
+      # must be present here — setting them at runtime has no effect.
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.PROD_NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_SITE_NAME: ${{ vars.PROD_NEXT_PUBLIC_SITE_NAME }}
+          NEXT_PUBLIC_MAPBOX_TOKEN: ${{ vars.PROD_NEXT_PUBLIC_MAPBOX_TOKEN }}
+
+      # `output: 'export'` writes ./out. Fail loudly rather than syncing an empty
+      # bucket if the export ever silently produces nothing.
+      - name: Verify export
+        run: |
+          test -f ./out/index.html || { echo "::error::./out/index.html missing — build did not export"; exit 1; }
+          echo "Exported $(find ./out -type f | wc -l) files"
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Two passes, because the two kinds of file need opposite cache policies.
+      #
+      # 1. /_next/static/** is content-hashed — a change means a new filename, so
+      #    it can be cached forever. Uploaded FIRST so the HTML that references
+      #    it never points at a missing asset.
+      - name: Deploy hashed assets to S3 (immutable)
+        run: |
+          aws s3 sync ./out/_next/static s3://${{ vars.PROD_BUCKET_NAME }}/_next/static \
+            --cache-control "public,max-age=31536000,immutable"
+
+      # 2. Everything else (HTML, sitemap.xml, robots.txt, /assets, /logo, /js)
+      #    keeps a stable URL, so it must revalidate or users get stale pages
+      #    after a deploy. CloudFront still caches it at the edge; the
+      #    invalidation below clears that.
+      #
+      #    --delete prunes removed files. _next/static is excluded so that assets
+      #    from the previous deploy survive for clients still on the old HTML.
+      #    (Those accumulate — prune them with an S3 lifecycle rule if it grows.)
+      - name: Deploy static site to S3
+        run: |
+          aws s3 sync ./out s3://${{ vars.PROD_BUCKET_NAME }} \
+            --exclude "_next/static/*" \
+            --cache-control "public,max-age=0,must-revalidate" \
+            --delete
+
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ env.CLOUDFRONT_DISTRIBUTION_ID }}
+          PATHS: "/*"
+          AWS_REGION: ${{ env.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

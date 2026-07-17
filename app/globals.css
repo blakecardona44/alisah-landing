@@ -1,0 +1,77 @@
+/* Template Name: Upwind - Tailwind CSS Landing Page Template
+   Author: Shreethemes
+   Website: https://shreethemes.in
+*/
+
+@import 'tailwindcss';
+
+/* general */
+@import './styles/general.css' layer(utilities);
+
+/* components */
+@import './styles/buttons.css' layer(utilities);
+@import './styles/breadcrumb.css' layer(utilities);
+
+/* structure */
+@import './styles/topnav.css' layer(utilities);
+@import './styles/footer.css' layer(utilities);
+
+/* pages */
+@import './styles/helper.css' layer(utilities);
+@import './styles/timeline.css' layer(utilities);
+@import './styles/countdown.css' layer(utilities);
+@import './styles/hero.css' layer(utilities);
+
+/* plugins */
+@import './styles/testi.css' layer(utilities);
+
+@config '../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* `animate-slide-in-bottom` / `animate-fade-out-bottom` are defined by the
+   `animation` block in tailwind.config.js — no local overrides needed. */
+
+@layer components {
+  * {
+    @apply font-body antialiased tracking-[-0.666667px];
+  }
+  p {
+    @apply font-body;
+  }
+}
+
+@layer utilities {
+  #tradingview_widget_wrapper div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Google Translate widget chrome */
+  .VIpgJd-ZVi9od-ORHb-OEVmcd,
+  .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+    display: none !important;
+  }
+
+  .tradingview-widget-copyright,
+  .mapboxgl-ctrl {
+    display: none !important;
+  }
+
+  /* Custom animations */
+}
