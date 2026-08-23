@@ -52,7 +52,7 @@ const footerLinks: FooterLink[] = [
   },
   {
     name: 'Contact Us',
-    href: 'https://wa.me/14242793916',
+    href: 'https://wa.me/19492976131',
   },
 ];
 

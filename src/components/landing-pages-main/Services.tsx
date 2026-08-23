@@ -155,7 +155,7 @@ const ServiceTeam: React.FC = () => {
           <span className="font-semibold">SRO Registrations:</span> FINRA, NYSE American LLC, Nasdaq Stock Market, New York Stock Exchange
         </p>
         <p className="text-base">
-          <span className="font-semibold">Phone:</span> +1(424)279-3916
+          <span className="font-semibold">Phone:</span> +1(949)297-6131
         </p>
         <p className="text-base">
           <span className="font-semibold">Email:</span> alishiamarieallred@gmail.com
@@ -177,7 +177,7 @@ const MyLocation: React.FC = () => {
             <br />
             St. Louis, MO 63131, USA
             <br />
-            Direct: +1(424)279-3916
+            Direct: +1(949)297-6131
           </p>
           <p className="text-base font-semibold mb-1">Moab Office</p>
           <p className="text-base">
