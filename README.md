@@ -1,6 +1,6 @@
-# Alishia Marie Allred — Landing Page
+# Elizabeth Nora Jones — Landing Page
 
-A static Next.js landing page for Alishia Marie Allred, an Investment Adviser and Broker regulated by FINRA and registered with EDWARD JONES.
+A static Next.js landing page for Elizabeth Nora Jones, Partner at Ares Management Corporation, Head of the Private Wealth Partnerships Team, and a General Securities Principal regulated by FINRA and registered with Ares Management Capital Markets LLC.
 
 ## Tech Stack
 

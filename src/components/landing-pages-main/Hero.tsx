@@ -24,17 +24,17 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-80" />
       <div className="container relative text-white">
         <h1 className="font-inter font-extralight text-5xl mb-4 md:mb-0 md:text-[72px] md:tracking-[-3px] text-center">
-          Alishia Marie Allred, CIMA®
+          Elizabeth Nora Jones
         </h1>
         <h2 className="font-inter text-base md:text-[25px] md:tracking-[-2.5px] leading-normal text-center">
-          Senior Vice President, Wealth Management, Financial Advisor, Family
-          Wealth Advisor, International Client Advisor
+          Partner at Ares Management Corporation | Head of Private Wealth
+          Partnerships | General Securities Principal
         </h2>
         <div className="flex justify-center gap-[15px] mt-8">
           <a
             target="_blank"
             rel="noreferrer"
-            href="mailto:alishiamarieallred@gmail.com"
+            href="mailto:elizabethnorajones@gmail.com"
           >
             <IoIosMail className="h-[32px] w-[32px]" />
           </a>

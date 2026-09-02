@@ -43,7 +43,7 @@ const faqs: FAQ[] = [
     question:
       'Why should you trust Us, and what makes us stand out from the rest?',
     answer:
-      "At Alishia Marie Allred Wealth Management, we're dedicated to providing accessible and user-friendly investment solutions. With a team of experienced professionals, we aim to empower individuals to achieve their financial goals through innovative and transparent investment opportunities. Our platform offers a diverse range of assets and personalized services tailored to your needs, ensuring a seamless and rewarding investment experience.",
+      "At Elizabeth Nora Jones Wealth Management, we're dedicated to providing accessible and user-friendly investment solutions. Led by a Partner of Ares Management Corporation and Head of its Private Wealth Partnerships Team, we aim to empower individuals and families to achieve their financial goals through disciplined and transparent investment guidance. Our practice offers a diverse range of assets and personalized services tailored to your needs, ensuring a seamless and rewarding investment experience.",
   },
 ];
 

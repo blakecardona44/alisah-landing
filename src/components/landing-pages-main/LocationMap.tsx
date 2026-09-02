@@ -5,8 +5,8 @@ import Map, { Marker } from 'react-map-gl/mapbox';
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || '';
 
-// Moab, UT
-const COORDS = { longitude: -109.5498, latitude: 38.5733 };
+// 245 Park Avenue, New York, NY 10167
+const COORDS = { longitude: -73.9755, latitude: 40.7546 };
 
 const LocationMap: React.FC = () => {
   // Without a token Mapbox renders a blank canvas and logs a 401, so degrade to

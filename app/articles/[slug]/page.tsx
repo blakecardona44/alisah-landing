@@ -8,8 +8,8 @@ import { getArticle, getArticleSlugs } from '@/lib/articles';
 
 // ----------------------------------------------------------------------
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://advisor.alishiamarieallred.com';
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || 'Alishia Marie Allred';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://advisor.elizabethnorajones.com';
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || 'Elizabeth Nora Jones';
 
 export async function generateMetadata({
   params,
@@ -189,11 +189,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                 <div className="flex">
                   <div className="pr-3 py-2 border-r border-r-[#A7A4A4]">
-                    <img
-                      src="https://www.morganstanley.com/etc.clientlibs/msdotcomr4/clientlibs/components/site/resources/icons/black/ms-icon-share.svg"
+                    <svg
                       className="w-[21px] h-[15px]"
-                      alt="Share"
-                    />
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-label="Share"
+                    >
+                      <circle cx="18" cy="5" r="3" />
+                      <circle cx="6" cy="12" r="3" />
+                      <circle cx="18" cy="19" r="3" />
+                      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                    </svg>
                   </div>
                   {social.map((item) => (
                     <a

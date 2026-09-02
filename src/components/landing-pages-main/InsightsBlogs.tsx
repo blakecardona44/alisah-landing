@@ -7,7 +7,7 @@ import {
 } from '@heroicons/react/24/solid';
 import React from 'react';
 
-const MorganBlogs: React.FC = () => {
+const InsightsBlogs: React.FC = () => {
   return (
     <div className="bg-white">
       <h3 className="text-[46px] text-center pt-16 font-thin">
@@ -62,4 +62,4 @@ const MorganBlogs: React.FC = () => {
   );
 };
 
-export default MorganBlogs;
+export default InsightsBlogs;

@@ -24,7 +24,7 @@ const inter = Inter({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const SITE_NAME = 'Alishia Marie Allred';
+const SITE_NAME = 'Elizabeth Nora Jones';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Alishia Marie Allred: Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, Philanthropy, and Financial Wellness.',
+    'Elizabeth Nora Jones, Partner at Ares Management Corporation and Head of the Private Wealth Partnerships Team: expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, Philanthropy, and Financial Wellness.',
   keywords: [
-    'Alishia Marie Allred',
-    'Alishia Allred',
-    'Marie Allred',
+    'Elizabeth Nora Jones',
+    'Elizabeth Jones',
+    'Nora Jones',
     'Financial Advisor',
     'Wealth Management',
     'Retirement Planning',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     'Philanthropy',
     'Financial Wellness',
     'Investment Management',
-    'alishiamarieallred',
+    'elizabethnorajones',
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     title: `${SITE_NAME} | Financial Advisor`,
     description:
-      'Alishia Marie Allred: Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, and Financial Wellness.',
+      'Elizabeth Nora Jones: Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, and Financial Wellness.',
     url: SITE_URL,
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@alishiamarieallred',
-    creator: '@alishiamarieallred',
+    site: '@elizabethnorajones',
+    creator: '@elizabethnorajones',
     title: `${SITE_NAME} | Financial Advisor`,
     description:
       'Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, and Business Planning.',

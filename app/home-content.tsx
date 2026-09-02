@@ -6,7 +6,7 @@ import Testimonials from 'src/components/landing-pages-main/Testimonials';
 import AboutSection from 'src/components/landing-pages-main/AboutSection';
 import Services, { PortfolioCTA } from 'src/components/landing-pages-main/Services';
 import BlogList1 from 'src/components/landing-pages-main/BlogList1';
-import MorganBlogs from 'src/components/landing-pages-main/MorganBlogs';
+import InsightsBlogs from 'src/components/landing-pages-main/InsightsBlogs';
 import CTAsection from 'src/components/landing-pages-main/CTAsection';
 import FAQs from 'src/components/landing-pages-main/FAQs';
 import Script from 'next/script';
@@ -24,7 +24,7 @@ const HomePageContent: React.FC<HomePageContentProps> = ({ initialArticles }) =>
       <Services />
       <PortfolioCTA />
       <BlogList1 list={initialArticles} />
-      <MorganBlogs />
+      <InsightsBlogs />
       <CTAsection />
       <FAQs />
       <Testimonials />

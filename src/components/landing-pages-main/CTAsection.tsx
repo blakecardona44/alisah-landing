@@ -16,7 +16,7 @@ const CTAsection: React.FC = () => {
       <div className="container">
         <div className="container md:flex md:justify-between py-[30px] border-y border-y-[#CCCCCC]">
           <p className="text-[19px] mb-6">
-            Ready to start a conversation? Contact Alishia Marie Allred today.
+            Ready to start a conversation? Contact Elizabeth Nora Jones today.
           </p>
           <div>
             <a

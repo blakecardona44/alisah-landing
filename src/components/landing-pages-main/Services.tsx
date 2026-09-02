@@ -59,18 +59,23 @@ const MyStory: React.FC = () => {
             {more && <br />}
             {more && (
               <span>
-                <span className="font-semibold">Alishia Marie Allred: </span>
-                &quot;I am Alishia Marie Allred (CRD#&nbsp;8046354), an Investment Adviser and
-                Broker regulated by FINRA. I am currently registered with EDWARD JONES
-                (CRD#&nbsp;250), located at 12555 Manchester Road, St. Louis, MO 63131. I have
-                been registered with the firm as a Broker since June&nbsp;15,&nbsp;2026 and as an
-                Investment Adviser Representative since July&nbsp;7,&nbsp;2026, operating from
-                Moab, UT. My practice is built on the belief that every client deserves a clear,
-                personalized financial plan — not a one-size-fits-all approach. I work closely
-                with individuals, families, and business owners to develop strategies across
-                wealth management, retirement planning, portfolio construction, and estate
-                planning. EDWARD JONES is a registered broker-dealer, and through this platform I
-                am able to provide access to a full spectrum of investment products and advisory
+                <span className="font-semibold">Elizabeth Nora Jones: </span>
+                &quot;I am Elizabeth Nora Jones (CRD#&nbsp;5934958), a General
+                Securities Principal and General Securities Representative
+                regulated by FINRA. I am currently registered with Ares
+                Management Capital Markets LLC, located at 245 Park Avenue,
+                44th Floor, New York, NY 10167, where I have been registered
+                since January&nbsp;2,&nbsp;2026. I also serve as a Partner of
+                Ares Management Corporation and Head of the Private Wealth
+                Partnerships Team in our New York office. My practice is built
+                on the belief that every client deserves a clear, personalized
+                financial plan — not a one-size-fits-all approach. I work
+                closely with individuals, families, and business owners to
+                develop strategies across wealth management, retirement
+                planning, portfolio construction, and estate planning. Ares
+                Management Capital Markets LLC is a registered broker-dealer,
+                and through this platform I am able to provide access to a
+                full spectrum of investment products and advisory
                 solutions.&quot;
               </span>
             )}
@@ -95,28 +100,6 @@ const MyStory: React.FC = () => {
           </ul>
         </div>
       </div>
-      {/* <div className="px-3">
-        <p className="text-[#757575] my-[62px]">
-          Registered with National Financial Services LLC (CRD#: 13041) since 12/11/2023.
-          Securities Agent: DC, WI, WA, VT, VA, UT, TX, TN, SC, RI, OH, NY, NJ, NC, MI, MD, MA,
-          LA, KY, KS, GA, FL, CO, CA, AZ, OR; General Securities Representative; Investment Advisor
-          Representative.
-        </p>
-        <div className="border-t border-t-[#CCCCCC]">
-          <p className="text-sm my-[32px]">
-            Check the background of our firm and investment professionals on{' '}
-            <a
-              href="https://brokercheck.finra.org/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#0F8EC7] cursor-pointer text-base font-bold underline"
-            >
-              FINRA&apos;s BrokerCheck
-            </a>
-            . National Financial Services LLC is a member of FINRA/SIPC.
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 };
@@ -126,39 +109,56 @@ const ServiceTeam: React.FC = () => {
     <div className="p-7.5">
       <h4 className="text-2xl font-bold my-4 mt-3">The Service Team</h4>
       <h6 className="font-bold text-lg my-2">
-        Alishia Marie Allred — Investment Adviser / Broker
+        Elizabeth Nora Jones — General Securities Principal / Registered
+        Representative
       </h6>
       <p className="mb-4">
-        Alishia Marie Allred (CRD#: 8046354) is an Investment Adviser and Broker regulated by
-        FINRA. She is currently registered with EDWARD JONES (CRD#: 250), a registered
-        broker-dealer headquartered at 12555 Manchester Road, St. Louis, MO 63131. Her practice
-        is centred on delivering thoughtful, personalised financial guidance to individuals,
-        families, and business owners at every stage of their financial journey.
+        Elizabeth Nora Jones (CRD#: 5934958) is a General Securities Principal
+        and General Securities Representative regulated by FINRA. She is
+        currently registered with Ares Management Capital Markets LLC, a
+        registered broker-dealer headquartered at 245 Park Avenue, 44th Floor,
+        New York, NY 10167. She is also a Partner of Ares Management
+        Corporation and leads the firm&apos;s Private Wealth Partnerships Team
+        in New York. Her practice is centred on delivering thoughtful,
+        personalised financial guidance to individuals, families, and business
+        owners at every stage of their financial journey.
       </p>
       <p className="mb-6">
-        With her office located in Moab, UT, Alishia and her team bring together deep market
-        knowledge and a client-first philosophy to help you build, protect, and transfer wealth
-        with confidence. Every engagement begins with listening — because the right strategy
-        starts with truly understanding your goals, values, and timeline.
+        Elizabeth has worked in the securities industry since 2012, including
+        nearly a decade with UBS Financial Services Inc. as a broker and
+        investment adviser before joining Ares in 2021. She holds Series 24,
+        Series 7, Series 66, and SIE qualifications, is registered in 53 U.S.
+        states and territories, and also serves as an independent trustee and
+        trust director for two family trusts. Every engagement begins with
+        listening — because the right strategy starts with truly understanding
+        your goals, values, and timeline.
       </p>
       <div className="space-y-1">
         <p className="text-base">
-          <span className="font-semibold">Firm:</span> EDWARD JONES (CRD#: 250)
+          <span className="font-semibold">Firm:</span> Ares Management Capital
+          Markets LLC
         </p>
         <p className="text-base">
-          <span className="font-semibold">Registered Since:</span> June 15, 2026 (Broker) / July 7, 2026 (Investment Adviser)
+          <span className="font-semibold">Registered Since:</span> January 2, 2026
         </p>
         <p className="text-base">
-          <span className="font-semibold">State Licenses:</span> Utah (Broker and Investment Adviser)
+          <span className="font-semibold">State Licenses:</span> Registered in
+          53 U.S. states and territories
         </p>
         <p className="text-base">
-          <span className="font-semibold">SRO Registrations:</span> FINRA, NYSE American LLC, Nasdaq Stock Market, New York Stock Exchange
+          <span className="font-semibold">SRO Registrations:</span> FINRA
+        </p>
+        <p className="text-base">
+          <span className="font-semibold">Examinations Passed:</span> Series 24
+          — General Securities Principal (Mar 2024); SIE (Oct 2018); Series 7 —
+          General Securities Representative (Aug 2012); Series 66 — Uniform
+          Combined State Law (Oct 2012)
         </p>
         <p className="text-base">
           <span className="font-semibold">Phone:</span> +1(949)297-6131
         </p>
         <p className="text-base">
-          <span className="font-semibold">Email:</span> alishiamarieallred@gmail.com
+          <span className="font-semibold">Email:</span> elizabethnorajones@gmail.com
         </p>
       </div>
     </div>
@@ -173,15 +173,15 @@ const MyLocation: React.FC = () => {
           <h4 className="text-2xl font-bold mb-[14px] mt-5">LOCATIONS</h4>
           <p className="text-base font-semibold mb-1">Main Office</p>
           <p className="text-base mb-4">
-            12555 Manchester Road
+            245 Park Avenue, 44th Floor
             <br />
-            St. Louis, MO 63131, USA
+            New York, NY 10167, USA
             <br />
             Direct: +1(949)297-6131
           </p>
-          <p className="text-base font-semibold mb-1">Moab Office</p>
+          <p className="text-base font-semibold mb-1">Firm</p>
           <p className="text-base">
-            Moab, UT, USA
+            Ares Management Capital Markets LLC
           </p>
         </div>
         <div className="md:flex-1 overflow-hidden">
