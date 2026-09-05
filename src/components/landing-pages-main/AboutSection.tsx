@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
     <div className="container translate-y-[-100px] md:flex py-6 gap-7 h-fit">
       <Image
         className="w-full md:w-[390px] md:h-[663.09px]"
-        src="/assets/images/alishia-allred.jpg"
+        src="/assets/images/elizabeth-nora-jones.jpg"
         width={390}
         height={663.09}
         alt="Elizabeth Nora Jones"
