@@ -23,7 +23,7 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'http://localhost:3000';
 const SITE_NAME = 'Elizabeth Nora Jones';
 
 export const metadata: Metadata = {

@@ -8,7 +8,7 @@ import { getArticle, getArticleSlugs } from '@/lib/articles';
 
 // ----------------------------------------------------------------------
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://advisor.elizabethnorajones.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://advisor.elizabethnorajones.com';
 const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || 'Elizabeth Nora Jones';
 
 export async function generateMetadata({
