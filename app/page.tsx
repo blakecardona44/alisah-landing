@@ -7,7 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'http:/
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: `${SITE_URL}`,
+    canonical: `${SITE_URL}/`,
   },
 };
 

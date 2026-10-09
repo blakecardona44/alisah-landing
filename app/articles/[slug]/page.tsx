@@ -24,7 +24,7 @@ export async function generateMetadata({
   }
 
   const plainExcerpt = article.excerpt.replace(/<[^>]*>/g, '').substring(0, 160).trim();
-  const canonicalUrl = `${SITE_URL}/articles/${article.slug}`;
+  const canonicalUrl = `${SITE_URL}/articles/${article.slug}/`;
   const publishedDate = new Date(article.date).toISOString();
 
   return {
@@ -149,7 +149,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const url = `${SITE_URL}/articles/${article.slug}`;
+  const url = `${SITE_URL}/articles/${article.slug}/`;
 
   return (
     <LandingLayout>

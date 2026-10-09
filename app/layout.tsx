@@ -63,6 +63,7 @@ export const metadata: Metadata = {
     description:
       'Elizabeth Judith Martinez: Expert guidance for secure financial futures. Specializing in Retirement Planning, Investing, Family Wealth, and Financial Wellness.',
     url: SITE_URL,
+    images: [{ url: '/assets/images/elizabeth-judith-martinez.jpg' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -85,10 +86,38 @@ type Props = {
   children: React.ReactNode;
 };
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Elizabeth Judith Martinez',
+  url: `${SITE_URL}/`,
+  image: `${SITE_URL}/assets/images/elizabeth-judith-martinez.jpg`,
+  email: 'mailto:elizabethjudithmartinez@gmail.com',
+  telephone: '+1-949-297-6131',
+  jobTitle: 'Financial Services Representative',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'PFS Investments Inc.',
+    url: 'https://www.pfsinvestments.com',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '6377 Clark Avenue, Suite 275',
+    addressLocality: 'Dublin',
+    addressRegion: 'CA',
+    postalCode: '94568',
+    addressCountry: 'US',
+  },
+};
+
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${karla.variable} ${inter.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Script src="/js/easy_background.js" strategy="beforeInteractive" />
         <Script src="/js/feather.min.js" strategy="beforeInteractive" />
         {children}

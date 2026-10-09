@@ -3,7 +3,7 @@ import { getBlogArticles } from '@/lib/articles';
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
-  'http://localhost:3000';
+  'https://advisor.elizabethjudithmartinez.com';
 
 export const dynamic = 'force-static';
 
