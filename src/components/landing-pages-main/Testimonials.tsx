@@ -33,7 +33,7 @@ const reviews: Review[] = [
   {
     title: 'Outstanding Wealth Management',
     img: '/assets/images/client/02.jpg',
-    body: "I've worked with several financial advisors over the years, but none have been as thorough and strategic as Ms. Jones. My portfolio has never been stronger.",
+    body: "I've worked with several financial advisors over the years, but none have been as thorough and strategic as Ms. Martinez. My portfolio has never been stronger.",
     author: 'Amanda Brooks',
     rating: 5,
   },
@@ -54,7 +54,7 @@ const reviews: Review[] = [
   {
     title: 'Life-Changing Financial Coaching',
     img: '/assets/images/frank.jpg',
-    body: "I went from constantly worrying about debt to having a clear savings plan and financial confidence. Ms. Jones's guidance has been truly life-changing.",
+    body: "I went from constantly worrying about debt to having a clear savings plan and financial confidence. Ms. Martinez's guidance has been truly life-changing.",
     author: 'Frank Adams',
     rating: 5,
   },
@@ -75,7 +75,7 @@ const reviews: Review[] = [
   {
     title: 'Worth Every Conversation',
     img: '/assets/images/client/03.jpg',
-    body: "Ms. Jones explains complex financial topics in a way that's easy to understand. Thanks to her advice, I've reached milestones I didn't think were possible.",
+    body: "Ms. Martinez explains complex financial topics in a way that's easy to understand. Thanks to her advice, I've reached milestones I didn't think were possible.",
     author: 'Sophia Lewis',
     rating: 5,
   },
