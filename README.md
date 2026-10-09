@@ -1,6 +1,6 @@
-# Elizabeth Nora Jones — Landing Page
+# Elizabeth Judith Martinez — Landing Page
 
-A static Next.js landing page for Elizabeth Nora Jones, Partner at Ares Management Corporation, Head of the Private Wealth Partnerships Team, and a General Securities Principal regulated by FINRA and registered with Ares Management Capital Markets LLC.
+A static Next.js landing page for Elizabeth Judith Martinez, a Financial Services Representative with PFS Investments Inc., a Primerica-affiliated registered broker-dealer regulated by FINRA.
 
 ## Tech Stack
 

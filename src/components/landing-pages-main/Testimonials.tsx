@@ -19,7 +19,7 @@ const reviews: Review[] = [
   {
     title: 'A Financial Plan That Finally Made Sense',
     img: '/assets/images/client/01.jpg',
-    body: "Working with Elizabeth Jones completely changed the way I approach my finances. She created a strategy that fits my goals, and I finally feel confident about my future.",
+    body: "Working with Elizabeth Martinez completely changed the way I approach my finances. She created a strategy that fits my goals, and I finally feel confident about my future.",
     author: 'Daniel K',
     rating: 5,
   },

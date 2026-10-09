@@ -43,7 +43,7 @@ const faqs: FAQ[] = [
     question:
       'Why should you trust Us, and what makes us stand out from the rest?',
     answer:
-      "At Elizabeth Nora Jones Wealth Management, we're dedicated to providing accessible and user-friendly investment solutions. Led by a Partner of Ares Management Corporation and Head of its Private Wealth Partnerships Team, we aim to empower individuals and families to achieve their financial goals through disciplined and transparent investment guidance. Our practice offers a diverse range of assets and personalized services tailored to your needs, ensuring a seamless and rewarding investment experience.",
+      "At Elizabeth Judith Martinez Financial Services, we're dedicated to providing accessible and user-friendly investment solutions. Led by a Financial Services Representative with PFS Investments Inc., a Primerica-affiliated firm, with financial services experience since 2006, we aim to empower individuals and families to achieve their financial goals through disciplined and transparent investment guidance. Our practice offers a diverse range of investment products and personalized services tailored to your needs, ensuring a seamless and rewarding investment experience.",
   },
 ];
 

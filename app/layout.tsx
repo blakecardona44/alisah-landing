@@ -24,29 +24,28 @@ const inter = Inter({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'http://localhost:3000';
-const SITE_NAME = 'Elizabeth Nora Jones';
+const SITE_NAME = 'Elizabeth Judith Martinez';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Financial Advisor | Family Wealth Advisor`,
+    default: `${SITE_NAME} | Financial Advisor | Financial Services Representative`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Elizabeth Nora Jones, Partner at Ares Management Corporation and Head of the Private Wealth Partnerships Team: expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, Philanthropy, and Financial Wellness.',
+    'Elizabeth Judith Martinez, Financial Services Representative with PFS Investments Inc., a Primerica-affiliated broker-dealer: expert guidance for secure financial futures. Specializing in Retirement Planning, Investing, Family Wealth, and Financial Wellness.',
   keywords: [
-    'Elizabeth Nora Jones',
-    'Elizabeth Jones',
-    'Nora Jones',
+    'Elizabeth Judith Martinez',
+    'Elizabeth Martinez',
     'Financial Advisor',
-    'Wealth Management',
+    'Financial Services Representative',
+    'PFS Investments',
+    'Primerica',
+    'Investment Company Products',
+    'Variable Contracts',
     'Retirement Planning',
-    'Family Wealth',
-    'Business Planning',
-    'Philanthropy',
     'Financial Wellness',
-    'Investment Management',
-    'elizabethnorajones',
+    'elizabethjudithmartinez',
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -62,19 +61,24 @@ export const metadata: Metadata = {
     locale: 'en_US',
     title: `${SITE_NAME} | Financial Advisor`,
     description:
-      'Elizabeth Nora Jones: Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, Business Planning, and Financial Wellness.',
+      'Elizabeth Judith Martinez: Expert guidance for secure financial futures. Specializing in Retirement Planning, Investing, Family Wealth, and Financial Wellness.',
     url: SITE_URL,
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@elizabethnorajones',
-    creator: '@elizabethnorajones',
+    site: '@elizabethjudithmartinez',
+    creator: '@elizabethjudithmartinez',
     title: `${SITE_NAME} | Financial Advisor`,
     description:
-      'Expert guidance for secure financial futures. Specializing in Retirement, Investing, Family Wealth, and Business Planning.',
+      'Expert guidance for secure financial futures. Specializing in Retirement Planning, Investing, and Family Wealth.',
   },
   manifest: '/manifest.json',
-  icons: [{ rel: 'icon', url: '/favicon.ico' }],
+  icons: [
+    { rel: 'icon', url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    { rel: 'icon', url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    { rel: 'apple-touch-icon', url: '/apple-touch-icon.png', sizes: '180x180' },
+    { rel: 'icon', url: '/favicon.ico' },
+  ],
 };
 
 type Props = {

@@ -59,24 +59,23 @@ const MyStory: React.FC = () => {
             {more && <br />}
             {more && (
               <span>
-                <span className="font-semibold">Elizabeth Nora Jones: </span>
-                &quot;I am Elizabeth Nora Jones (CRD#&nbsp;5934958), a General
-                Securities Principal and General Securities Representative
-                regulated by FINRA. I am currently registered with Ares
-                Management Capital Markets LLC, located at 245 Park Avenue,
-                44th Floor, New York, NY 10167, where I have been registered
-                since January&nbsp;2,&nbsp;2026. I also serve as a Partner of
-                Ares Management Corporation and Head of the Private Wealth
-                Partnerships Team in our New York office. My practice is built
-                on the belief that every client deserves a clear, personalized
-                financial plan — not a one-size-fits-all approach. I work
-                closely with individuals, families, and business owners to
-                develop strategies across wealth management, retirement
-                planning, portfolio construction, and estate planning. Ares
-                Management Capital Markets LLC is a registered broker-dealer,
-                and through this platform I am able to provide access to a
-                full spectrum of investment products and advisory
-                solutions.&quot;
+                <span className="font-semibold">Elizabeth Judith Martinez: </span>
+                &quot;I am Elizabeth Judith Martinez (CRD#&nbsp;5887375), an
+                Investment Company and Variable Contracts Representative
+                regulated by FINRA. I am currently registered with PFS
+                Investments Inc. (CRD#&nbsp;10111), a Primerica-affiliated
+                broker-dealer, where I have been registered since
+                October&nbsp;28,&nbsp;2021. My branch office is located at 6377
+                Clark Avenue, Suite 275, Dublin, California 94568. My practice
+                is built on the belief that every client deserves a clear,
+                personalized financial plan — not a one-size-fits-all approach.
+                I work closely with individuals, families, and business owners
+                to develop strategies across wealth management, retirement
+                planning, portfolio construction, and education funding. PFS
+                Investments Inc. is a registered broker-dealer, and through
+                this platform I am able to provide access to mutual funds,
+                variable contracts, and a full spectrum of investment products
+                and solutions.&quot;
               </span>
             )}
             <br />
@@ -109,56 +108,56 @@ const ServiceTeam: React.FC = () => {
     <div className="p-7.5">
       <h4 className="text-2xl font-bold my-4 mt-3">The Service Team</h4>
       <h6 className="font-bold text-lg my-2">
-        Elizabeth Nora Jones — General Securities Principal / Registered
+        Elizabeth Judith Martinez — Investment Company &amp; Variable Contracts
         Representative
       </h6>
       <p className="mb-4">
-        Elizabeth Nora Jones (CRD#: 5934958) is a General Securities Principal
-        and General Securities Representative regulated by FINRA. She is
-        currently registered with Ares Management Capital Markets LLC, a
-        registered broker-dealer headquartered at 245 Park Avenue, 44th Floor,
-        New York, NY 10167. She is also a Partner of Ares Management
-        Corporation and leads the firm&apos;s Private Wealth Partnerships Team
-        in New York. Her practice is centred on delivering thoughtful,
+        Elizabeth Judith Martinez (CRD#: 5887375) is an Investment Company and
+        Variable Contracts Representative regulated by FINRA. She is currently
+        registered with PFS Investments Inc. (CRD#: 10111), a
+        Primerica-affiliated registered broker-dealer, and works from the
+        firm&apos;s branch office at 6377 Clark Avenue, Suite 275, Dublin,
+        California 94568. Her practice is centred on delivering thoughtful,
         personalised financial guidance to individuals, families, and business
         owners at every stage of their financial journey.
       </p>
       <p className="mb-6">
-        Elizabeth has worked in the securities industry since 2012, including
-        nearly a decade with UBS Financial Services Inc. as a broker and
-        investment adviser before joining Ares in 2021. She holds Series 24,
-        Series 7, Series 66, and SIE qualifications, is registered in 53 U.S.
-        states and territories, and also serves as an independent trustee and
-        trust director for two family trusts. Every engagement begins with
-        listening — because the right strategy starts with truly understanding
-        your goals, values, and timeline.
+        Elizabeth has worked in financial services since 2006 — with Primerica
+        Financial Services in sales since October 2006 and with PFS
+        Investments Inc. since March 2021, both in Dublin, California. She
+        holds Series 6, SIE, and Series 63 qualifications, is registered in
+        California, Colorado, Hawaii, and Texas, and also offers
+        investment-related products of companies affiliated with PFS
+        Investments. Every engagement begins with listening — because the
+        right strategy starts with truly understanding your goals, values, and
+        timeline.
       </p>
       <div className="space-y-1">
         <p className="text-base">
-          <span className="font-semibold">Firm:</span> Ares Management Capital
-          Markets LLC
+          <span className="font-semibold">Firm:</span> PFS Investments Inc.
+          (CRD#: 10111)
         </p>
         <p className="text-base">
-          <span className="font-semibold">Registered Since:</span> January 2, 2026
+          <span className="font-semibold">Registered Since:</span> October 28, 2021
         </p>
         <p className="text-base">
-          <span className="font-semibold">State Licenses:</span> Registered in
-          53 U.S. states and territories
+          <span className="font-semibold">State Licenses:</span> California,
+          Colorado, Hawaii, Texas
         </p>
         <p className="text-base">
           <span className="font-semibold">SRO Registrations:</span> FINRA
         </p>
         <p className="text-base">
-          <span className="font-semibold">Examinations Passed:</span> Series 24
-          — General Securities Principal (Mar 2024); SIE (Oct 2018); Series 7 —
-          General Securities Representative (Aug 2012); Series 66 — Uniform
-          Combined State Law (Oct 2012)
+          <span className="font-semibold">Examinations Passed:</span> Series 6 —
+          Investment Company Products/Variable Contracts Representative (Oct
+          2021); SIE (Jan 2021); Series 63 — Uniform Securities Agent State Law
+          (Apr 2022)
         </p>
         <p className="text-base">
           <span className="font-semibold">Phone:</span> +1(949)297-6131
         </p>
         <p className="text-base">
-          <span className="font-semibold">Email:</span> elizabethnorajones@gmail.com
+          <span className="font-semibold">Email:</span> elizabethjudithmartinez@gmail.com
         </p>
       </div>
     </div>
@@ -171,17 +170,18 @@ const MyLocation: React.FC = () => {
       <div className="mt-10 md:flex md:pr-10">
         <div className="md:flex-1">
           <h4 className="text-2xl font-bold mb-[14px] mt-5">LOCATIONS</h4>
-          <p className="text-base font-semibold mb-1">Main Office</p>
+          <p className="text-base font-semibold mb-1">Branch Office</p>
           <p className="text-base mb-4">
-            245 Park Avenue, 44th Floor
+            6377 Clark Avenue, Suite 275
             <br />
-            New York, NY 10167, USA
+            Dublin, CA 94568, USA
             <br />
             Direct: +1(949)297-6131
           </p>
-          <p className="text-base font-semibold mb-1">Firm</p>
+          <p className="text-base font-semibold mb-1">Firm Main Office</p>
           <p className="text-base">
-            Ares Management Capital Markets LLC
+            PFS Investments Inc.
+            <br />1 Primerica Parkway, Duluth, GA 30099
           </p>
         </div>
         <div className="md:flex-1 overflow-hidden">

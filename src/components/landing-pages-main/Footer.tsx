@@ -20,7 +20,7 @@ const social: SocialLink[] = [
   },
   {
     name: 'Mail',
-    href: 'mailto:elizabethnorajones@gmail.com',
+    href: 'mailto:elizabethjudithmartinez@gmail.com',
     icon: (props) => (
       <svg
         stroke="currentColor"
